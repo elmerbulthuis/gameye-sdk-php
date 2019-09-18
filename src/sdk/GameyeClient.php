@@ -147,7 +147,7 @@ class GameyeClient
         $state,
         $args
     ) {
-        $url = sprintf('%s/fetch/%s/%s', $this->config['ApiEndpoint'], $state, implode('/', $args));
+        $url = sprintf('%s/query/%s/%s', $this->config['ApiEndpoint'], $state, implode('/', $args));
 
         return $url;
     }
@@ -155,7 +155,7 @@ class GameyeClient
     private function makeCommandUrl(
         $action
     ) {
-        $url = sprintf('%s/action/%s', $this->config['ApiEndpoint'], $action);
+        $url = sprintf('%s/command/%s', $this->config['ApiEndpoint'], $action);
 
         return $url;
     }
